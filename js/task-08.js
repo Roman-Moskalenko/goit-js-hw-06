@@ -27,11 +27,16 @@ function formSubmit(event) {
     const {
       elements: { email, password }
     } = event.currentTarget;
+    const data ={
+      email: email.value,
+      password: password.value
+    }
     if (email.value === "" || password.value === "") {
         const message = 'Пожалуйста, заполните все поля'
         return alert( message);
       }
     
-      console.log(`Email: ${email.value}, Password: ${password.value}`);
+      // console.log(`Email: ${email.value}, Password: ${password.value}`);
+      console.log(data)
       event.currentTarget.reset();
 }
